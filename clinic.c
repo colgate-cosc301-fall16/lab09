@@ -8,10 +8,10 @@
 #define USEC_PER_SEC (1000 * 1000)
 #define SLEEP_MAX (5 * USEC_PER_SEC)
 
-typedef pthread_mutex_t lock_t;
-#define lock_init(l) pthread_mutex_init(l, NULL)
-#define lock_lock(l) pthread_mutex_lock(l)
-#define lock_unlock(l) pthread_mutex_unlock(l)
+typedef pthread_mutex_t mutex_t;
+#define mutex_init(l) pthread_mutex_init(l, NULL)
+#define mutex_lock(l) pthread_mutex_lock(l)
+#define mutex_unlock(l) pthread_mutex_unlock(l)
 typedef pthread_cond_t cond_t;
 #define cond_init(c) pthread_cond_init(c, NULL)
 #define cond_wait(c,l) pthread_cond_wait(c, l)
